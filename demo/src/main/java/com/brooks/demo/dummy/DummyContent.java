@@ -10,6 +10,7 @@ import java.util.List;
 public class DummyContent{
     private static int COUNT ;
     private static int TOTALPAGE ;
+
     public static List<DummyItem> generateData (int page) {
         int start = page * COUNT;
         int end = start + COUNT;

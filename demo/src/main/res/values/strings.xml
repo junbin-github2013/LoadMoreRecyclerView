@@ -4,4 +4,5 @@
     <string name="autoload">autoLoad</string>
     <string name="manualload">manualLoad</string>
     <string name="autoUsePic">autoLoad Use  Picture Animation</string>
+    <string name="mc_auto">minecraft auto</string>
 </resources>

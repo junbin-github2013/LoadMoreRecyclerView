@@ -22,6 +22,14 @@ public class MyItemRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerView
     public void addDatas(List<DummyContent.DummyItem> datas){
         mValues.addAll(datas);
     }
+
+    public DummyContent.DummyItem getItemData(int position) {
+        if (position < mValues.size()) {
+            return mValues.get(position);
+        }
+        return null;
+    }
+
     @Override
     public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup parent,int viewType){
         View view=LayoutInflater.from(parent.getContext())

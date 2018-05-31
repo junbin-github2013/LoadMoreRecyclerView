@@ -8,7 +8,6 @@ import android.support.v7.widget.Toolbar;
 
 import com.brooks.demo.dummy.DummyContent;
 import com.brooks.loadmorerecyclerview.LoadMoreRecyclerView;
-import com.brooks.loadmorerecyclerview.LoadType;
 public class ManualloadActivity extends AppCompatActivity{
     private LoadMoreRecyclerView recyclerView;
     private SwipeRefreshLayout swipeRefreshLayout;
@@ -35,8 +34,8 @@ public class ManualloadActivity extends AppCompatActivity{
         myItemRecyclerViewAdapter=new MyItemRecyclerViewAdapter(DummyContent.generateData(page));
         recyclerView.setAdapter(myItemRecyclerViewAdapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
-        recyclerView.setAutoLoadMoreEnable(DummyContent.hasMore(page));
-        recyclerView.setLoadType(LoadType.MANUAL_LOAD);
+        recyclerView.setLoadMoreEnable(DummyContent.hasMore(page));
+        recyclerView.setLoadType(LoadMoreRecyclerView.LOAD_TYPE_MANUAL);
         recyclerView.setLoadMoreListener(new LoadMoreRecyclerView.LoadMoreListener(){
             @Override
             public void onLoadMore(){
@@ -63,8 +62,8 @@ public class ManualloadActivity extends AppCompatActivity{
                 page=0;
                 myItemRecyclerViewAdapter=new MyItemRecyclerViewAdapter(DummyContent.generateData(page));
                 recyclerView.setAdapter(myItemRecyclerViewAdapter);
-                recyclerView.setAutoLoadMoreEnable(DummyContent.hasMore(page));
-                recyclerView.setLoadType(LoadType.MANUAL_LOAD);
+                recyclerView.setLoadMoreEnable(DummyContent.hasMore(page));
+                recyclerView.setLoadType(LoadMoreRecyclerView.LOAD_TYPE_MANUAL);
                 myItemRecyclerViewAdapter.notifyDataSetChanged();
                 swipeRefreshLayout.setRefreshing(false);
             }

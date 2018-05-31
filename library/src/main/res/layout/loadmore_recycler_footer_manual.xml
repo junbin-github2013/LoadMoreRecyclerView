@@ -1,21 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
              android:layout_width="match_parent"
              android:layout_height="100dp"
              android:background="@color/global_bg"
              android:gravity="center"
              android:padding="10dp">
     <TextView
-        android:id="@+id/loadmore"
+        android:id="@+id/loadmore_recycler_footer_hint"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/global_bg"
         android:gravity="center"
         android:text="加载更多"
         android:textSize="20sp"/>
+
     <com.tt.whorlviewlibrary.WhorlView
-        android:id="@+id/whorl"
         xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/loadmore_recycler_footer_whorl"
         android:layout_width="1dp"
         android:layout_height="1dp"
         android:layout_marginTop="2dp"
@@ -26,4 +27,5 @@
         app:whorlview_strokeWidth="6"
         app:whorlview_sweepAngle="90">
     </com.tt.whorlviewlibrary.WhorlView>
-</LinearLayout>
+
+</FrameLayout>

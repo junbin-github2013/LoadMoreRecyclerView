@@ -9,8 +9,8 @@
 
 
     <com.tt.whorlviewlibrary.WhorlView
-        android:id="@+id/whorl"
         xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/loadmore_recycler_footer_whorl"
         android:layout_width="1dp"
         android:layout_height="1dp"
         android:layout_marginTop="2dp"
@@ -20,6 +20,4 @@
         app:whorlview_strokeWidth="6"
         app:whorlview_sweepAngle="90">
     </com.tt.whorlviewlibrary.WhorlView>
-
-
 </LinearLayout>
